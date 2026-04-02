@@ -42,13 +42,14 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, i) => (
+            <Link key={project.title} to={project.link} className="block">
             <motion.div
-              key={project.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="group p-8 rounded-2xl bg-card border border-border card-hover"
+              className="group p-8 rounded-2xl bg-card border border-border card-hover h-full"
+            >
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
                 <project.icon className="text-primary" size={28} />
