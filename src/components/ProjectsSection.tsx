@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Building2, Gamepad2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
