@@ -11,11 +11,11 @@ const features = [
 
 const ProforgeProject = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen theme-proforge">
       {/* Header */}
       <div className="border-b border-border">
         <div className="container mx-auto px-6 py-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
             <ArrowLeft size={16} /> Back to Portfolio
           </Link>
         </div>
@@ -23,7 +23,7 @@ const ProforgeProject = () => {
 
       {/* Hero */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full accent-glow-bg blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -31,18 +31,18 @@ const ProforgeProject = () => {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-              <Gamepad2 className="text-primary" size={32} />
+            <div className="w-16 h-16 rounded-2xl accent-bg flex items-center justify-center mb-6">
+              <Gamepad2 className="accent-text" size={32} />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-foreground">
-              Proforge – <span className="gradient-text">Esports Gaming App</span>
+              Proforge – <span className="gradient-text-theme">Esports Gaming App</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               A prototype platform built for gamers to connect, form competitive teams, and participate in esports tournaments. Proforge focuses on community building, fair matchmaking, and delivering an immersive competitive gaming experience.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Web Development", "UI/UX Design", "Prototype", "Gaming"].map((tag) => (
-                <span key={tag} className="text-xs font-mono px-3 py-1.5 rounded-md bg-secondary text-secondary-foreground">
+                <span key={tag} className="text-xs font-mono px-3 py-1.5 rounded-md accent-tag">
                   {tag}
                 </span>
               ))}
@@ -60,7 +60,7 @@ const ProforgeProject = () => {
             viewport={{ once: true }}
             className="section-heading mb-12"
           >
-            Core <span className="gradient-text">Features</span>
+            Core <span className="gradient-text-theme">Features</span>
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
             {features.map((f, i) => (
@@ -70,10 +70,10 @@ const ProforgeProject = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-card border border-border card-hover"
+                className="p-6 rounded-xl bg-card border border-border accent-border accent-glow transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <f.icon className="text-primary" size={22} />
+                <div className="w-12 h-12 rounded-lg accent-bg flex items-center justify-center mb-4">
+                  <f.icon className="accent-text" size={22} />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{f.title}</h3>
                 <p className="text-sm text-muted-foreground">{f.desc}</p>
@@ -92,7 +92,7 @@ const ProforgeProject = () => {
             viewport={{ once: true }}
             className="section-heading mb-12"
           >
-            The <span className="gradient-text">Vision</span>
+            The <span className="gradient-text-theme">Vision</span>
           </motion.h2>
           <div className="max-w-2xl space-y-8">
             {[
@@ -109,7 +109,7 @@ const ProforgeProject = () => {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-6"
               >
-                <span className="text-3xl font-bold gradient-text font-mono">{item.step}</span>
+                <span className="text-3xl font-bold gradient-text-theme font-mono">{item.step}</span>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
