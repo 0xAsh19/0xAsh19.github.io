@@ -9,6 +9,7 @@ const projects = [
       "A comprehensive system to manage patient records, appointments, doctor schedules, and billing — streamlining hospital operations with an intuitive interface.",
     icon: Building2,
     tags: ["C++", "OOP", "File Handling"],
+    link: "/projects/hospital-management",
   },
   {
     title: "Proforge – Esports Gaming App",
@@ -16,6 +17,7 @@ const projects = [
       "A prototype platform designed for gamers to connect, form teams, and compete in esports tournaments. Built with a focus on community and competitive play.",
     icon: Gamepad2,
     tags: ["Web Dev", "UI/UX", "Prototype"],
+    link: "/projects/proforge",
   },
 ];
 
