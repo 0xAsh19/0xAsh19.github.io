@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Building2, Gamepad2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -8,6 +9,7 @@ const projects = [
       "A comprehensive system to manage patient records, appointments, doctor schedules, and billing — streamlining hospital operations with an intuitive interface.",
     icon: Building2,
     tags: ["C++", "OOP", "File Handling"],
+    link: "/projects/hospital-management",
   },
   {
     title: "Proforge – Esports Gaming App",
@@ -15,6 +17,7 @@ const projects = [
       "A prototype platform designed for gamers to connect, form teams, and compete in esports tournaments. Built with a focus on community and competitive play.",
     icon: Gamepad2,
     tags: ["Web Dev", "UI/UX", "Prototype"],
+    link: "/projects/proforge",
   },
 ];
 
@@ -39,13 +42,13 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, i) => (
+            <Link key={project.title} to={project.link} className="block">
             <motion.div
-              key={project.title}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="group p-8 rounded-2xl bg-card border border-border card-hover"
+              className="group p-8 rounded-2xl bg-card border border-border card-hover h-full"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
                 <project.icon className="text-primary" size={28} />
@@ -74,6 +77,7 @@ const ProjectsSection = () => {
                 ))}
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
