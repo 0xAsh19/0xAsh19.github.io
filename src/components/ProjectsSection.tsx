@@ -78,6 +78,7 @@ const ProjectsSection = () => {
                 ))}
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
