@@ -76,43 +76,9 @@
   .glow-border-strong {
     box-shadow: var(--glow-primary-strong);
   }
-  /* Hospital theme — emerald green */
-  .theme-hospital {
-    --theme-accent: 160 84% 39%;
-    --theme-glow: 0 0 40px hsl(160 84% 39% / 0.15);
-    --theme-glow-strong: 0 0 60px hsl(160 84% 39% / 0.25);
-  }
-  .theme-hospital .gradient-text-theme {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(160 84% 50%), hsl(160 84% 30%));
-  }
-  .theme-hospital .accent-bg { background: hsl(160 84% 39% / 0.1); }
-  .theme-hospital .accent-bg-hover:hover { background: hsl(160 84% 39% / 0.15); }
-  .theme-hospital .accent-text { color: hsl(160 84% 39%); }
-  .theme-hospital .accent-border:hover { border-color: hsl(160 84% 39% / 0.3); }
-  .theme-hospital .accent-glow:hover { box-shadow: 0 0 40px hsl(160 84% 39% / 0.15); }
-  .theme-hospital .accent-glow-bg { background: hsl(160 84% 39% / 0.05); }
-  .theme-hospital .accent-tag { background: hsl(160 84% 39% / 0.12); color: hsl(160 84% 60%); }
-
-  /* Proforge theme — violet purple */
-  .theme-proforge {
-    --theme-accent: 270 76% 55%;
-    --theme-glow: 0 0 40px hsl(270 76% 55% / 0.15);
-    --theme-glow-strong: 0 0 60px hsl(270 76% 55% / 0.25);
-  }
-  .theme-proforge .gradient-text-theme {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(270 76% 65%), hsl(270 76% 42%));
-  }
-  .theme-proforge .accent-bg { background: hsl(270 76% 55% / 0.1); }
-  .theme-proforge .accent-bg-hover:hover { background: hsl(270 76% 55% / 0.15); }
-  .theme-proforge .accent-text { color: hsl(270 76% 55%); }
-  .theme-proforge .accent-border:hover { border-color: hsl(270 76% 55% / 0.3); }
-  .theme-proforge .accent-glow:hover { box-shadow: 0 0 40px hsl(270 76% 55% / 0.15); }
-  .theme-proforge .accent-glow-bg { background: hsl(270 76% 55% / 0.05); }
-  .theme-proforge .accent-tag { background: hsl(270 76% 55% / 0.12); color: hsl(270 76% 72%); }
 
 
+  .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(205 100% 65%), hsl(205 100% 45%));
   }
