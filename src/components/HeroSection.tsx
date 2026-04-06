@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Ambient glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+      {/* Ambient glow - green */}
+      <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
+      {/* Ambient glow - pink */}
+      <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] rounded-full bg-accent/5 blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.p
@@ -48,6 +50,14 @@ const HeroSection = () => {
             className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:shadow-[var(--glow-primary-strong)] transition-all duration-300 hover:-translate-y-0.5"
           >
             View Projects
+          </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="px-8 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm hover:shadow-[var(--glow-accent-strong)] transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2"
+          >
+            <Download size={16} />
+            Resume
           </a>
           <a
             href="#contact"
